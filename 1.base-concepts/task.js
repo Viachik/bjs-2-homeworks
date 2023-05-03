@@ -11,10 +11,9 @@ function solveEquation(a, b, c) {
     return [(-b + Math.sqrt(D))/2*a, (-b - Math.sqrt(D))/2*a];
   }
 }
-
-/*
 console.log(solveEquation(1, 2, 1))
 
+/*
 function calculateTotalMortgage(percent, contribution, amount, date) {
     let totalAmount;
   
