@@ -1,4 +1,6 @@
 "use strict";
+
+// Задача 1
 function solveEquation(a, b, c) {
   // Решить уравнение
   let D = b**2 - 4*a*c;
@@ -13,12 +15,15 @@ function solveEquation(a, b, c) {
 }
 console.log(solveEquation(1, 2, 1))
 
-/*
-function calculateTotalMortgage(percent, contribution, amount, date) {
+//Задача 2
+function calculateTotalMortgage(percent, contribution, amount, countMonths) {
     let totalAmount;
-  
-    // код для задачи №2 писать здесь
-  
-    return totalAmount;
+    let percentMonth = (percent / 100) / 12;
+    let creditBody = amount - contribution;
+    let monthPay = creditBody * (percentMonth + (percentMonth / (((1 + percentMonth)**countMonths) - 1)));
+    totalAmount = (monthPay * countMonths).toFixed(2);
+    
+    return Number(totalAmount);
   }
-  */
+
+calculateTotalMortgage(10, 0, 50000, 12)
